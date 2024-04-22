@@ -34,7 +34,6 @@ pipeline {
             sh "docker push mohamedmagdy840/jenkins-cicd:${BUILD_NUMBER}"
                 
             }
-        }
     }
 
     stage('Update Deployment File') {
