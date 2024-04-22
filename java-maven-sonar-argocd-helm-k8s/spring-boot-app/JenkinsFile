@@ -32,8 +32,7 @@ pipeline {
             withCredentials([usernamePassword(credentialsId: 'dockerhub-token', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
             sh "echo $PASSWORD | docker login -u $USERNAME --password-stdin"
             sh "docker push mohamedmagdy840/jenkins-cicd:${BUILD_NUMBER}"
-                
-            }
+        }
     }
 
     stage('Update Deployment File') {
